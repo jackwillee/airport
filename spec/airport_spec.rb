@@ -20,4 +20,9 @@ it 'does not allow plane to land if no space' do
     end
     expect { airport.land(plane) }.to raise_error 'no space'
   end
+
+  it 'override the capacity' do
+    airport = Airport.new(20)
+    expect(airport.capacity).to eq 20
+  end
 end 
